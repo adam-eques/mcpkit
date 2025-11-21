@@ -11,3 +11,8 @@ All notable changes to mcpkit are documented here.
 
 - Implement JSON-RPC 2.0 requests, notifications, responses and errors.
 - Preserve string and integer identifiers on the wire.
+
+## 0.0.3 — MCP types
+
+- Add the initialize handshake, capabilities and content blocks.
+- Add tools, resources, prompts and notification parameter types.
