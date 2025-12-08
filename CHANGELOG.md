@@ -16,3 +16,8 @@ All notable changes to mcpkit are documented here.
 
 - Add the initialize handshake, capabilities and content blocks.
 - Add tools, resources, prompts and notification parameter types.
+
+## 0.0.4 — Transports
+
+- Add a context-aware, newline-delimited stdio transport.
+- Add an in-memory pipe and a Server-Sent Events writer.
