@@ -21,3 +21,8 @@ All notable changes to mcpkit are documented here.
 
 - Add a context-aware, newline-delimited stdio transport.
 - Add an in-memory pipe and a Server-Sent Events writer.
+
+## 0.0.5 — Observability
+
+- Add a structured logger that never writes to stdout.
+- Add a dependency-free metrics registry and build stamping.
