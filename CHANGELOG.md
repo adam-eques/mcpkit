@@ -26,3 +26,7 @@ All notable changes to mcpkit are documented here.
 
 - Add a structured logger that never writes to stdout.
 - Add a dependency-free metrics registry and build stamping.
+
+## 0.0.6 — Tool framework
+
+- Add the Handler interface, a schema builder and a thread-safe registry.
