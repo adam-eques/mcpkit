@@ -30,3 +30,8 @@ All notable changes to mcpkit are documented here.
 ## 0.0.6 — Tool framework
 
 - Add the Handler interface, a schema builder and a thread-safe registry.
+
+## 0.1.0-rc1 — Server core
+
+- Dispatch the full method set with an initialize-first guard.
+- Run each request on its own goroutine with per-request cancellation.
