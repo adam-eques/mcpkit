@@ -35,3 +35,7 @@ All notable changes to mcpkit are documented here.
 
 - Dispatch the full method set with an initialize-first guard.
 - Run each request on its own goroutine with per-request cancellation.
+
+## 0.1.0-rc2 — Core tools
+
+- Add the calculator, hash/uuid/base64, json_query and time tools.
