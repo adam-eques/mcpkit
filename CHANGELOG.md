@@ -39,3 +39,8 @@ All notable changes to mcpkit are documented here.
 ## 0.1.0-rc2 — Core tools
 
 - Add the calculator, hash/uuid/base64, json_query and time tools.
+
+## 0.1.0-rc3 — RAG and state
+
+- Add an in-process RAG toolset with a pure-Go embedder.
+- Add a persistent, concurrency-safe key/value store.
