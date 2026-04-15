@@ -44,3 +44,8 @@ All notable changes to mcpkit are documented here.
 
 - Add an in-process RAG toolset with a pure-Go embedder.
 - Add a persistent, concurrency-safe key/value store.
+
+## 0.1.0-rc4 — Network and system tools
+
+- Add http_fetch with an SSRF guard and web_search.
+- Add a sandboxed filesystem toolset and an allowlisted shell tool.
