@@ -1,0 +1,27 @@
+{
+  "server": {
+    "name": "mcpkit",
+    "version": "0.1.0",
+    "instructions": "A stdlib-only Model Context Protocol server.",
+    "concurrency": 16
+  },
+  "log": {
+    "level": "info",
+    "format": "text"
+  },
+  "gateway": {
+    "address": ":8080"
+  },
+  "tools": {
+    "calc": true,
+    "rag": true,
+    "time": true,
+    "text": true,
+    "jsonQuery": true,
+    "kv": { "enabled": true, "path": "" },
+    "fetch": { "enabled": false, "allowPrivate": false, "maxBytes": 5242880 },
+    "fs": { "enabled": false, "root": "", "readOnly": true },
+    "shell": { "enabled": false, "allowlist": [], "timeoutSeconds": 15 },
+    "webSearch": { "enabled": false, "endpoint": "" }
+  }
+}
