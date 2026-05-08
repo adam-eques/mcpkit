@@ -49,3 +49,8 @@ All notable changes to mcpkit are documented here.
 
 - Add http_fetch with an SSRF guard and web_search.
 - Add a sandboxed filesystem toolset and an allowlisted shell tool.
+
+## 0.1.0-rc5 — Configuration and CLI
+
+- Add layered configuration and the tool wiring layer.
+- Add the stdio server and HTTP gateway binaries.
