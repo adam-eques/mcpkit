@@ -1,0 +1,23 @@
+{
+  "server": {
+    "name": "mcpkit-dev",
+    "version": "0.1.0",
+    "instructions": "Development server with filesystem and fetch tools enabled.",
+    "concurrency": 8
+  },
+  "log": {
+    "level": "debug",
+    "format": "text"
+  },
+  "tools": {
+    "calc": true,
+    "rag": true,
+    "time": true,
+    "text": true,
+    "jsonQuery": true,
+    "kv": { "enabled": true, "path": "./.mcpkit-kv.json" },
+    "fetch": { "enabled": true, "allowPrivate": false, "maxBytes": 1048576 },
+    "fs": { "enabled": true, "root": "./scratch", "readOnly": false },
+    "webSearch": { "enabled": true }
+  }
+}
