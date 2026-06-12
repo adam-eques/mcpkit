@@ -1,0 +1,25 @@
+run:
+  timeout: 3m
+  tests: true
+
+linters:
+  enable:
+    - govet
+    - staticcheck
+    - errcheck
+    - ineffassign
+    - unused
+    - gofmt
+    - goimports
+    - misspell
+    - unconvert
+    - revive
+
+issues:
+  exclude-rules:
+    # Example and command mains print to stdout by design.
+    - path: (examples|cmd)/
+      linters:
+        - errcheck
+  max-issues-per-linter: 0
+  max-same-issues: 0
