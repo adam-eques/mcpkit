@@ -1,25 +1,41 @@
+version: "2"
 run:
-  timeout: 3m
   tests: true
-
 linters:
   enable:
-    - govet
-    - staticcheck
-    - errcheck
-    - ineffassign
-    - unused
-    - gofmt
-    - goimports
     - misspell
-    - unconvert
     - revive
-
+    - unconvert
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      # Example and command mains print to stdout by design, and test setup
+      # (mock handlers, fixture writes) intentionally ignores errors.
+      - linters:
+          - errcheck
+        path: (examples|cmd)/|_test\.go
+      # Handler/test signatures are fixed by the interfaces they satisfy.
+      - path: _test\.go
+        text: unused-parameter
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
 issues:
-  exclude-rules:
-    # Example and command mains print to stdout by design.
-    - path: (examples|cmd)/
-      linters:
-        - errcheck
   max-issues-per-linter: 0
   max-same-issues: 0
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

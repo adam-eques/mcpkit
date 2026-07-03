@@ -26,8 +26,8 @@ func (Tool) Definition() mcp.Tool {
 			"expression": tools.Str("the expression to evaluate, e.g. \"2 * (3 + 4) ^ 2\""),
 		}, "expression"),
 		Annotations: &mcp.ToolAnnotations{
-			Title:        "Calculator",
-			ReadOnlyHint: true,
+			Title:         "Calculator",
+			ReadOnlyHint:  true,
 			OpenWorldHint: false,
 		},
 	}

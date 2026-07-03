@@ -50,7 +50,7 @@ func TestSearch(t *testing.T) {
 func TestSearchRespectsLimit(t *testing.T) {
 	srv := testServer(t)
 	defer srv.Close()
-	_, results, _ := NewSearcher(WithEndpoint(srv.URL + "/")).Search(context.Background(), "x", 1)
+	_, results, _ := NewSearcher(WithEndpoint(srv.URL+"/")).Search(context.Background(), "x", 1)
 	if len(results) != 1 {
 		t.Fatalf("limit not applied: %d", len(results))
 	}
