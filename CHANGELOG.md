@@ -54,3 +54,9 @@ All notable changes to mcpkit are documented here.
 
 - Add layered configuration and the tool wiring layer.
 - Add the stdio server and HTTP gateway binaries.
+
+## 0.1.0 — Release 0.1.0
+
+- Add benchmarks, a Go client example and a recorded session.
+- Add full documentation, cross-platform CI and a distroless image.
+- First tagged release of the zero-dependency MCP server.
