@@ -17,7 +17,7 @@ func TestEval(t *testing.T) {
 		{"1 + 2 * 3", 7},
 		{"(1 + 2) * 3", 9},
 		{"2 ^ 3 ^ 2", 512}, // right associative
-		{"-2 ^ 2", -4},      // unary binds looser than power here: -(2^2)
+		{"-2 ^ 2", -4},     // unary binds looser than power here: -(2^2)
 		{"10 % 3", 1},
 		{"sqrt(16)", 4},
 		{"abs(-5)", 5},

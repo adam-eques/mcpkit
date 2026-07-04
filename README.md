@@ -12,11 +12,22 @@ library. It compiles and tests anywhere, with no supply chain to audit.
 
 ## Why
 
-Most MCP servers wrap a vendor SDK. mcpkit implements the protocol from the wire
-up — the initialize handshake, capability negotiation, tools/resources/prompts,
-cancellation and progress — so it doubles as a readable reference for how MCP
-actually works, and as a solid base you can extend without pulling in a
-dependency tree.
+There is an official MCP Go SDK, and for most production servers it's the right
+choice — it tracks the spec and is battle-tested across many clients. mcpkit is a
+deliberate alternative: it implements the protocol from the wire up — the
+initialize handshake, capability negotiation, tools/resources/prompts,
+cancellation and progress — on the standard library alone. That buys two things
+the SDK route can't:
+
+- **A readable reference** for how MCP actually works, with nothing hidden behind
+  a dependency. The demux, the session state and the cancellation plumbing are
+  all here to read.
+- **A zero-dependency, auditable base** for security-sensitive tooling. This
+  server ships an SSRF guard, a sandboxed filesystem and an allowlisted shell —
+  and there is no third-party supply chain to vet, patch or keep in sync.
+
+Reach for the official SDK when you want to ship and forget; reach for mcpkit when
+you want to understand the protocol end to end or extend a base you fully control.
 
 ## Highlights
 

@@ -48,7 +48,9 @@ func rpcHandler(srv *server.Server, logger *log.Logger) http.HandlerFunc {
 		}
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write(resp)
+		if _, err := w.Write(resp); err != nil {
+			logger.Error("gateway write", "err", err)
+		}
 	}
 }
 

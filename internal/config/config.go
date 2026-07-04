@@ -31,16 +31,16 @@ type GatewayConfig struct {
 
 // ToolsConfig enables and configures individual tools.
 type ToolsConfig struct {
-	Calc      bool           `json:"calc"`
-	Fetch     FetchConfig    `json:"fetch"`
-	FS        FSConfig       `json:"fs"`
-	Shell     ShellConfig    `json:"shell"`
-	KV        KVConfig       `json:"kv"`
-	WebSearch WebConfig      `json:"webSearch"`
-	RAG       bool           `json:"rag"`
-	Time      bool           `json:"time"`
-	Text      bool           `json:"text"`
-	JSONQuery bool           `json:"jsonQuery"`
+	Calc      bool        `json:"calc"`
+	Fetch     FetchConfig `json:"fetch"`
+	FS        FSConfig    `json:"fs"`
+	Shell     ShellConfig `json:"shell"`
+	KV        KVConfig    `json:"kv"`
+	WebSearch WebConfig   `json:"webSearch"`
+	RAG       bool        `json:"rag"`
+	Time      bool        `json:"time"`
+	Text      bool        `json:"text"`
+	JSONQuery bool        `json:"jsonQuery"`
 }
 
 // FetchConfig configures the http_fetch tool.
